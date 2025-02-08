@@ -1,0 +1,6 @@
+@LottoManager_HostAddress = http://localhost:5155
+
+GET {{LottoManager_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
