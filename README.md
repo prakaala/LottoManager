@@ -21,8 +21,8 @@ Here's why:
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [!DotNet][DotNet]][DotNet-URL]
-* [![React][React.js]][React-url]
+* [![DotNet][DotNet]][DotNet-URL]
+* [![React][React.js]][Reagotct-url]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -37,7 +37,7 @@ Follow following steps to get started
 ### Prerequisites
 
 This is an example of how to list things you need to use the software and how to install them.
-* dotnet
+* dotnet : Copy this is browser to download the SDK
   ```sh
   https://download.visualstudio.microsoft.com/download/pr/b4f4563c-d597-4ae0-b600-325906a8cfed/b31b22966e3d486aefb9f87bf8da643e/dotnet-sdk-8.0.405-osx-arm64.pkg
   ```
@@ -57,7 +57,7 @@ This is an example of how to list things you need to use the software and how to
    ```json
    "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Port=3306;Database=LotteryManager;User=root;Password=Alpha1_Beta2;"
-}
+    }
    ```
 5. Change git remote url to avoid accidental pushes to base project
    ```sh
@@ -114,15 +114,6 @@ Don't forget to give the project a star! Thanks again!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
-### Top contributors:
-
-<a href="https://github.com/othneildrew/Best-README-Template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
-</a>
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
