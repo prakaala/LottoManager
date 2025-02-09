@@ -4,6 +4,7 @@ using LottoManager.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LottoManager.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250209181608_AddUsers")]
+    partial class AddUsers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -58,9 +61,6 @@ namespace LottoManager.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserID"));
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime(6)");
-
                     b.Property<string>("Email")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -84,19 +84,7 @@ namespace LottoManager.Migrations
 
                     b.HasKey("UserID");
 
-                    b.HasIndex("GasStationID");
-
                     b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("Models.User.User", b =>
-                {
-                    b.HasOne("LottoManager.Models.GasStation", "GasStation")
-                        .WithMany()
-                        .HasForeignKey("GasStationID")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.Navigation("GasStation");
                 });
 #pragma warning restore 612, 618
         }
