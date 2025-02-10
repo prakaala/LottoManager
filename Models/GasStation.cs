@@ -5,7 +5,7 @@ namespace LottoManager.Models{
     public class GasStation{
 
         [Key]
-        public int gasStationID { get; set; }
+        public int GasStationID { get; set; }
 
         [Required]     
         public string Name { get; set; } = string.Empty;
@@ -16,6 +16,6 @@ namespace LottoManager.Models{
         [Required, EmailAddress]
         public string Email { get; set; } = string.Empty;
 
-        public DateTime createdAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

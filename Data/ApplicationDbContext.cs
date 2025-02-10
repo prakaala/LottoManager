@@ -1,5 +1,6 @@
 using LottoManager.Models;
 using Microsoft.EntityFrameworkCore;
+using Models.Lottery;
 using Models.User;
 
 namespace LottoManager.Data{
@@ -12,7 +13,9 @@ namespace LottoManager.Data{
 
         public DbSet<GasStation> GasStations { get; set; }
         public DbSet<User> Users{get; set;}
+        public DbSet<Lottery> Lotterys{get; set;}
 
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().
