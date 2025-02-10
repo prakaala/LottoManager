@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using LottoManager.Models;
 
-namespace Models.User{
+namespace LottoManager.Models{
     public class User{  
         [Required]
         public int UserID { get; set; }
@@ -18,7 +18,7 @@ namespace Models.User{
         [Required]
         public string Email { get; set; } = string.Empty;
 
-        public string  PasswordHash { get; set; }
+        public string?  PasswordHash { get; set; }
 
         [Required]
         [MaxLength(20)]

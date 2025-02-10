@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
-namespace Models.Lottery{
+namespace LottoManager.Models{
 
     public class Lottery{
 
