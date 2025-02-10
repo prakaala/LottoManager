@@ -16,6 +16,8 @@ namespace LottoManager.Data{
 
         public DbSet<TicketInventory> TicketInventorys{get;set;}
 
+
+        public DbSet<SalesReport> SalesReports{get; set;}
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -37,10 +39,19 @@ namespace LottoManager.Data{
             HasForeignKey(t=>t.GasStationID).
             OnDelete(DeleteBehavior.Cascade);
 
-
-
             modelBuilder.Entity<TicketInventory>().
             HasIndex(t => new{t.GasStationID, t.LotteryID}).IsUnique();
+
+
+
+            modelBuilder.Entity<SalesReport>().
+            HasOne(s => s.GasStation).
+            WithMany().
+            HasForeignKey(s=>s.GasStationID)
+            .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<SalesReport>().
+            HasIndex(s => new {s.GasStationID, s.Date}).IsUnique();
 
 
         }
