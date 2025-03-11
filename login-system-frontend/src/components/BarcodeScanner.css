@@ -1,0 +1,289 @@
+.barcode-scanner-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.barcode-scanner-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#reader {
+    margin: 20px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.manual-entry {
+    margin: 20px 0;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.manual-entry h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.barcode-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background: #4154f1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.success-message {
+    padding: 10px;
+    margin: 10px 0;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 4px;
+}
+
+.error-message {
+    padding: 10px;
+    margin: 10px 0;
+    background: #ffebee;
+    color: #c62828;
+    border-radius: 4px;
+}
+
+.scanned-code {
+    margin-top: 20px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 4px;
+    font-family: monospace;
+}
+
+.tickets-list {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tickets-list h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.tickets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+.ticket-card {
+    border: 1px solid #eee;
+    border-radius: 6px;
+    padding: 15px;
+    background: #f8f9fa;
+}
+
+.ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.barcode {
+    font-family: monospace;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.ticket-info {
+    font-size: 14px;
+    color: #666;
+}
+
+.scan-date {
+    display: block;
+    margin-top: 5px;
+}
+
+.tickets-table-container {
+    margin-top: 30px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.tickets-table-container h3 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.tickets-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background: rgb(20, 0, 0);
+}
+
+.tickets-table th,
+.tickets-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.tickets-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.tickets-table tr:hover {
+    background-color: #070000;
+}
+
+.barcode-cell {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+    .tickets-table {
+        font-size: 14px;
+    }
+
+    .tickets-table th,
+    .tickets-table td {
+        padding: 8px;
+    }
+
+    .barcode-cell {
+        font-size: 12px;
+    }
+}
+
+/* Optional: Add sorting indicators */
+.tickets-table th {
+    position: relative;
+    cursor: pointer;
+}
+
+.tickets-table th:after {
+    content: '↕';
+    position: absolute;
+    right: 8px;
+    opacity: 0.5;
+}
+
+/* Add status indicators */
+.ticket-status {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.status-active {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.status-used {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.download-csv-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.download-csv-btn:hover {
+    background: #45a049;
+}
+
+/* Responsive design for the header */
+@media screen and (max-width: 768px) {
+    .table-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .download-csv-btn {
+        width: 100%;
+        justify-content: center;
+    }
+} 

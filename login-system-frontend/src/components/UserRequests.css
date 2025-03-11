@@ -1,0 +1,112 @@
+.user-requests-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.user-requests-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.requests-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.request-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #ccc;
+}
+
+.request-card.pending {
+    border-left-color: #ffa726;
+}
+
+.request-card.approved {
+    border-left-color: #66bb6a;
+}
+
+.request-card.rejected {
+    border-left-color: #ef5350;
+}
+
+.request-card h3 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.request-card p {
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.request-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.pending .status {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.approved .status {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.rejected .status {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.date {
+    color: #888;
+    font-size: 14px;
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 18px;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 

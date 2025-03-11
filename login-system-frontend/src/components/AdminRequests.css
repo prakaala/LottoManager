@@ -1,0 +1,126 @@
+.admin-requests-container {
+    padding: 20px;
+}
+
+.admin-requests-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.requests-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.request-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-left: 4px solid #ccc;
+    display: flex;
+    flex-direction: column;
+}
+
+.request-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.request-header h3 {
+    color: #333;
+    margin: 0;
+    font-size: 18px;
+}
+
+.user-info {
+    color: #666;
+    font-size: 14px;
+}
+
+.request-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.approve-btn, .reject-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.approve-btn {
+    background: #4caf50;
+    color: white;
+}
+
+.approve-btn:hover {
+    background: #43a047;
+}
+
+.reject-btn {
+    background: #f44336;
+    color: white;
+}
+
+.reject-btn:hover {
+    background: #e53935;
+}
+
+.request-card.pending {
+    border-left-color: #ffa726;
+}
+
+.request-card.approved {
+    border-left-color: #66bb6a;
+}
+
+.request-card.rejected {
+    border-left-color: #ef5350;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: auto;
+}
+
+.pending .status {
+    background: #fff3e0;
+    color: #f57c00;
+}
+
+.approved .status {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.rejected .status {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.request-footer {
+    margin-top: 15px;
+    color: #888;
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .requests-grid {
+        grid-template-columns: 1fr;
+    }
+} 

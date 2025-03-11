@@ -1,0 +1,16 @@
+.orders-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.orders-list {
+    list-style: none;
+    padding: 0;
+}
+
+.order-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}

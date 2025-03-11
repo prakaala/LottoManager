@@ -1,0 +1,101 @@
+/* Register.css */
+
+/* Import the styles from Login.css to maintain consistency */
+@import './Login.css';
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% {
+      background-color: #f3f4f6;
+    }
+    50% {
+      background-color: #e6e7e8;
+    }
+    100% {
+      background-color: #f3f4f6;
+    }
+  }
+  
+  .register-wrapper {
+    width: 100%;
+    max-width: 450px;
+    z-index: 1;
+    padding: 20px;
+  }
+  
+  
+  .register-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+  
+  .register-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .register-input:focus {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #48bb78; /* Green color */
+    color: #ffffff;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #38a169;
+    transform: translateY(-5px); /* Hover effect */
+  }
+  
+  .error-message {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    border: 1px solid rgba(220, 53, 69, 0.3);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-blue-500 {
+    color: #3182ce;
+  }
+  
+  .text-blue-500:hover {
+    color: #2b6cb0;
+    text-decoration: underline;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
